@@ -1,3 +1,12 @@
+<h1>Fork</h1>
+This is convenience fork. When working with https://github.com/howardwu/libsnark-tutorial, this library is a `git submodule` dependency. However when calling `git submodule update ...` cloning this repository failed because of the following reason, therefore I had to remove those particular profiling folders making the `git submodule command` to work:
+
+```bash
+pal@:../libsnark$ git submodule update --init --recursive
+fatal: cannot create directory at 'libfqfft/profiling/logs/memory/02-19_03:04': Invalid argument
+Unable to checkout '415d38df733b264d1ada69e1f6edc2f809c9b502' in submodule path 'depends/libfqfft'
+```
+
 <h1 align="center">libfqfft</h1>
 <h4 align="center">C++ library for FFTs in Finite Fields</h4>
 
